@@ -7,7 +7,7 @@ from google.auth.transport.requests import Request
 logger = logging.getLogger(__name__)
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
+SCOPES = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/drive.metadata']
 
 def get_credentials():
     """Gets the google credentials required for APIs
