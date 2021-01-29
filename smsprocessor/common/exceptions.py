@@ -19,3 +19,12 @@ class NotValidMimeType(Exception):
 
     def __str__(self):
         return f'{self.file_name} :: {self.message}'
+
+class NotValidFields(Exception):
+    def __init__(self, file_name, message = 'Incorrect amount of fields'):
+        self.file_name = file_name
+        self.message = message
+        super().__init__(self.message)
+
+    def __str__(self):
+        return f'{self.file_name} :: {self.message}'
