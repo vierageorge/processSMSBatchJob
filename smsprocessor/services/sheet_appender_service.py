@@ -1,6 +1,6 @@
 import gspread
 
-class SheetAppender:
+class SheetAppenderService:
     def __init__(self, credentials_path, file_id, sheet_name):
         self.sheet_service = gspread.service_account(credentials_path)
         self.sheet_file = self.sheet_service.open_by_key(file_id)

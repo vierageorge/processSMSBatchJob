@@ -1,15 +1,5 @@
 # processSMSBatchJob
 
 1. Run with `python -m smsprocessor`
-2. A `credentials.json` file is required in the root of the project.
-
-```
-{"installed":
-    {"client_id":"2464558...",
-    "project_id":"myauto...",
-    "auth_uri":"https://acco...",
-    "token_uri":"https://oaut...",
-    "auth_provider_x509_cert_url":"https://www.goo...",
-    "client_secret":"lYG8...",
-    "redirect_uris":["urn:ietf:wg:...","http://l..."]}}
-```
+2. A `service_account.json` file is required in the root of the project. This should be generated on the project on Google Console that's being used on the execution of the job.
+3. Under `smsprocessor`, a `config.py` file with the following variables defined: SOURCE_FOLDER_ID, PROCESSED_FOLDER_ID, EXPENSE_SHEET_ID, EXPENSE_SHEET_NAME.
