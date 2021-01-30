@@ -5,6 +5,8 @@ class SheetAppender:
         self.sheet_service = gspread.service_account(credentials_path)
         self.sheet_file = self.sheet_service.open_by_key(file_id)
         self.worksheet = self.sheet_file.worksheet(sheet_name)
+        self.rows_appended = 0
 
     def append_to_sheet(self, date, message):
         self.worksheet.append_row([date,message], value_input_option='USER_ENTERED')
+        self.rows_appended += 1

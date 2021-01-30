@@ -24,6 +24,7 @@ def run():
             logger.warn(e)
         except Exception as e:
             logger.error(f"{file['name']} :: {e}")
+    logger.info(f"Appended {expense_appender.rows_appended} rows.")
     logger.info("APPLICATION FINALIZED")
 
     

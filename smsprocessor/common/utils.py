@@ -16,5 +16,4 @@ def process_file(creds, file, appender):
     date_s = f'{file_name[0:4]}/{file_name[4:6]}/{file_name[6:8]}'
     date = parse(date_s, fuzzy=False)
     appender.append_to_sheet(date_s, message)
-
     gds.change_parent_directory(creds, file['id'], SOURCE_FOLDER_ID, PROCESSED_FOLDER_ID)
