@@ -139,6 +139,7 @@ cython_debug/
 
 # Google Stuff
 credentials.json
+service_account.json
 *.pickle
 
 #Other Files
